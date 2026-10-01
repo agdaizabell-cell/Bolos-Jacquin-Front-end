@@ -66,6 +66,9 @@ font-size: 20px;
     text-align: center;
 
 }
+
+
+
 .link_produtos span{
     color: #444444;
     position: absolute;
@@ -164,7 +167,8 @@ font-size: 20px;
 
  .form_coluna1,
  .form_coluna2{
-  width: 424px;
+    max-width: 500px;
+  width: 45%;
 
  }
 
@@ -219,18 +223,22 @@ form input[type=text]{
     height: 26px;
  }
 
- .input_cat input{
-    width: 314px;
-    margin-right: 20px;
-    /* max-width: 314px; */
+ .input_cat{
+   width: 80%;
  }
- /* .input_cat{
-    width: 80%;
- } */
+
+ .input_cat input{
+    /* width: 314px; */
+    margin-right: 20px;
+    max-width: 314px;
+ }
+ .input_valor{
+   width: 92%;
+ }
 
  .input_valor input{
     margin-right: 20px;
-    width: 360px;
+    max-width: 360px;
  }
 
  form input[type=button]{
@@ -253,30 +261,80 @@ form input[type=text]{
 
 
  /* ------------------------LISTA DE GRUPOS---------------------- */
- .list_produtos{
+ .list_produto{
     background-color: var(--corsecundari);
+    padding-top: 50px;
+    padding-bottom: 50px;
  }
  table{
-    background-color: blue;
+    /* background-color: rgb(108, 93, 68); */
     width: 100%;
     font-family: var(--fontHaken);
     text-transform: uppercase;
+    border-collapse: collapse;
  }
 
  table svg{
     width: 35px;
+    color: #8d2f2f;
  }
 
  thead{
     font-size: 12px;
     font-weight: 600;
     color: #444444;
+    text-align: left;
  }
+
 
  tbody{
     color: #aaaaaa;
  }
  
+ th, td{
+   border-bottom: solid 1px #444444;
+   padding: 5px 10px;
+ }
+ /* -----------------FOOTER-------------------- */
+
+footer{
+    background-color: #FFF4F4;
+    height: 110px;
+    display: flex;
+    align-items: center;
+
+}
+
+.footer_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav_footer{
+    display: flex;
+    justify-content: space-between;
+    width: 160px;
+}
+.footer_container span,
+.nav_footer a{
+      font-family: "Hanken Grotesk", sans-serif;  
+
+}
+.nav_footer a{
+    text-decoration: none;
+    color: #747878;
+}
+
+
+/* ----------------BOTAO REDES----------------- */
+footer svg{
+  background-color: transparent;
+  border: none;
+  display: none;
+}
+/* footer button{
+         display: block;
+      } */
 
 
 
@@ -326,4 +384,41 @@ form input[type=text]{
         max-width: 500px;
         width: 80%;
     }
-}
+    /* ----------------TABELA---------------- */
+
+      thead{
+         display: none;
+      }
+
+      tbody tr{
+         display: flex;
+         flex-direction: column;
+         border: solid 1px #444444;
+         border-radius: 10px;
+         background-color: #ffffff;
+         box-shadow: #0000003e 5px 5px 5px;
+         max-width: 500px;
+         margin: 0 auto 50px;
+
+      }
+      
+      tbody td{
+         border: none;
+      }
+
+      tbody td::before{
+         content: attr(data-cell) ": ";
+         font-size: 12px;
+         color: #444444;
+      }
+
+/* botao */
+
+      footer button{
+         display: block;
+      }
+.nav_footer{
+   display: none;
+} 
+      
+   }
