@@ -332,11 +332,10 @@ footer svg{
   border: none;
   display: none;
 }
-/* footer button{
-         display: block;
-      } */
 
-
+.footer_container span{
+   display: none;
+}
 
 
 
@@ -413,12 +412,12 @@ footer svg{
       }
 
 /* botao */
+footer button{
+   display: block;
 
-      footer button{
-         display: block;
-      }
-.nav_footer{
-   display: none;
-} 
+}
+ .footer_container img{
+   width: 110px;
+ }
       
    }
